@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import { COLORS } from '../styles/colors';
 
 const Container = styled.div`
-  background-color: ${COLORS.WHITE};
   height: 100vh;
   padding: 52px 25px 0;
   position: relative;
@@ -40,11 +39,14 @@ const Container = styled.div`
 // `;
 
 const Circle = styled.div`
-  background-color: red;
-  clip-path: circle(50% at 50% 0);
+  background-color: ${COLORS.WHITE_FOG};
+  clip-path: circle(70% at 50% 0);
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 100vw;
+  height: 100vw;
+  top: 0;
+  left: 0;
+  opacity: 0.99;
 `;
 
 function Main() {

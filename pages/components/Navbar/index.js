@@ -1,17 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { COLORS } from '@styles/colors';
 import { Title } from '@styles/Styles';
 
 const Container = styled.div`
-  background-color: ${COLORS.NEUTRAL_LIGHT};
-  border-radius: 8px;
   display: flex;
-  flex-direction: column;
-  height: 160px;
-  justify-content: space-between;
-  padding: 18px;
   width: 100%;
 `;
 
@@ -21,14 +15,21 @@ const AmountContainer = styled.div`
   justify-content: space-between;
 `;
 
+const TitleLeft = styled(Title)`
+  margin-left: 16px;
+`;
+
 function ExpenseCard() {
   return (
     <Container>
-      <Title />
-      <AmountContainer>
-        <Title width="200px" height="82px" />
-        <Title width="60px" height="60px" />
-      </AmountContainer>
+      <Title height="40px" width="120px" />
+      <TitleLeft
+        height="40px"
+        width="120px"
+        css={`
+          margin-left: 15px;
+        `}
+      />
     </Container>
   );
 }
