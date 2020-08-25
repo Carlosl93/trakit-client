@@ -5,31 +5,44 @@ import { COLORS } from '@styles/colors';
 import { Title } from '@styles/Styles';
 
 const Container = styled.div`
-  background-color: ${COLORS.NEUTRAL_LIGHT};
-  border-radius: 8px;
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  height: 160px;
+  height: 50px;
   justify-content: space-between;
-  margin-bottom: 45px;
-  padding: 18px;
+  margin-bottom: 20px;
   width: 100%;
 `;
 
-const AmountContainer = styled.div`
-  align-items: center;
+const Icon = styled(Title)`
+  flex-grow: 0;
+  margin-right: 15px;
+`;
+
+const ExpenseDescription = styled.div`
+  flex-grow: 2;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+
+const ExpenseTitle = styled(Title)`
+  margin-bottom: 10px;
+`;
+
+const ExpenseSubtitle = styled(Title)`
+  flex-grow: 1;
+  margin-bottom: 10px;
 `;
 
 function ExpenseCard() {
   return (
     <Container>
-      <Title />
-      <AmountContainer>
-        <Title width="200px" height="82px" />
-        <Title width="60px" height="60px" />
-      </AmountContainer>
+      <Icon height="50px" width="50px" />
+      <ExpenseDescription>
+        <ExpenseTitle height="16px" width="180px" />
+        <ExpenseSubtitle height="8px" width="115px" />
+      </ExpenseDescription>
+      <Title height="30px" width="30px" />
     </Container>
   );
 }

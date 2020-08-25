@@ -6,6 +6,7 @@ import { Title } from '@styles/Styles';
 
 const Container = styled.div`
   display: flex;
+  margin-bottom: 40px; /* TODO - Abstract this margin to specify it on the parent component to make this reusable */
   width: 100%;
 `;
 
@@ -22,14 +23,8 @@ const TitleLeft = styled(Title)`
 function ExpenseCard() {
   return (
     <Container>
-      <Title height="40px" width="120px" />
-      <TitleLeft
-        height="40px"
-        width="120px"
-        css={`
-          margin-left: 15px;
-        `}
-      />
+      <Title height="45px" width="120px" />
+      <TitleLeft height="45px" width="120px" />
     </Container>
   );
 }
