@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { COLORS } from '@styles/colors';
 import { Title } from '@styles/Styles';
+import { TitleSmall } from '@styles/texts';
 
 import ExpenseCard from '../ExpenseCard';
 
@@ -19,14 +20,14 @@ const AmountContainer = styled.div`
   justify-content: space-between;
 `;
 
-const TitleDate = styled(Title)`
+const TitleDate = styled(TitleSmall)`
   margin-bottom: 18px;
 `;
 
 function ExpensesDay() {
   return (
     <Container>
-      <TitleDate height="8px" width="115px" />
+      <TitleDate>Aug 25</TitleDate>
       <ExpenseCard />
       <ExpenseCard />
       <ExpenseCard />

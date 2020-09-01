@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { COLORS } from '@styles/colors';
 import { Title } from '@styles/Styles';
+import { TitleSmall, TitleMedium } from '@styles/texts';
 
 const Container = styled.div`
   align-items: center;
@@ -29,9 +30,8 @@ const ExpenseTitle = styled(Title)`
   margin-bottom: 10px;
 `;
 
-const ExpenseSubtitle = styled(Title)`
-  flex-grow: 1;
-  margin-bottom: 10px;
+const TitleExpense = styled(TitleSmall)`
+  color: ${COLORS.PURPLE};
 `;
 
 function ExpenseCard() {
@@ -39,10 +39,10 @@ function ExpenseCard() {
     <Container>
       <Icon height="50px" width="50px" />
       <ExpenseDescription>
-        <ExpenseTitle height="16px" width="180px" />
-        <ExpenseSubtitle height="8px" width="115px" />
+        <TitleMedium>Food</TitleMedium>
+        <TitleSmall>Buy weekly groceries</TitleSmall>
       </ExpenseDescription>
-      <Title height="30px" width="30px" />
+      <TitleExpense>+ $20.000</TitleExpense>
     </Container>
   );
 }

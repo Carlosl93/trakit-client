@@ -1,4 +1,5 @@
 export const COLORS = {
+  PURPLE: '#5513FB',
   NEUTRAL_BLACK: '#1A2151',
   NEUTRAL_LIGHT: '#F2F6FF',
   WHITE_FOG: '#E3E8FF',

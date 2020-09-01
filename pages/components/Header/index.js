@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { COLORS } from '@styles/colors';
 import { Title } from '@styles/Styles';
+import { TitleMedium } from '@styles/texts';
 
 const Container = styled.div`
   display: flex;
@@ -14,8 +14,8 @@ const Container = styled.div`
 function Header() {
   return (
     <Container>
-      <Title />
-      <Title width="80px" />
+      <TitleMedium>Daily Balance</TitleMedium>
+      <TitleMedium>$ 50.000</TitleMedium>
     </Container>
   );
 }

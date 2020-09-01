@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 
 import { COLORS } from '@styles/colors';
 import { Title } from '@styles/Styles';
+import { TitleLarge } from '@styles/texts';
 
 const Container = styled.div`
   display: flex;
@@ -16,15 +17,15 @@ const AmountContainer = styled.div`
   justify-content: space-between;
 `;
 
-const TitleLeft = styled(Title)`
+const TitleLeft = styled(TitleLarge)`
   margin-left: 16px;
 `;
 
 function ExpenseCard() {
   return (
     <Container>
-      <Title height="45px" width="120px" />
-      <TitleLeft height="45px" width="120px" />
+      <TitleLarge>History</TitleLarge>
+      <TitleLeft>Profile</TitleLeft>
     </Container>
   );
 }
